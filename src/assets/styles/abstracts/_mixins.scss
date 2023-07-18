@@ -1,0 +1,15 @@
+@use "functions" as *;
+@use "variables" as *;
+
+@mixin media($breakpoint, $type: null) {
+  @if ($type == max) {
+    @media (max-width: #{Breakpoint($breakpoint) - 1}) {
+      @content;
+    }
+  }
+  @else {
+    @media (min-width: #{Breakpoint($breakpoint)}) {
+      @content;
+    }
+  }
+}

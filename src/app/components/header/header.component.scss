@@ -1,0 +1,7 @@
+.toolbar {
+    justify-content: space-between;
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+}

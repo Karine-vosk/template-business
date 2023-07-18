@@ -1,0 +1,54 @@
+$paths: (
+    assets: '../../../assets'
+);
+
+//Colors
+$colors: (
+    bg-primary: rgba(255, 255, 255, 1),
+    bg-secondary: rgba(251, 248, 255, 1),
+    text-primary: rgba(27, 27, 31, 1),
+    text-secondary: rgba(91, 92, 121, 1),
+    border-primary: rgba(228, 225, 236, 1),
+    border-secondary: rgba(197, 196, 221, 1),
+    accent-primary: rgba(73, 78, 203, 1),
+    accent-secondary: rgba(233, 229, 248, 1),
+    success: rgba(0, 183, 110, 1),
+    error: rgba(186, 26, 26, 1),
+    disable: rgba(129, 144, 162, 1)
+);
+
+//Line Heights
+$lineHeights: (
+    sm: 1.5,
+    lg: 1.3
+);
+
+//Font Sizes
+$fontSizes: (
+    xs: 12px,
+    sm: 14px,
+    md: 16px,
+    lg: 18px,
+    xl: 24px,
+    xxl: 28px,
+    xxxl: 32px
+);
+
+//Margins & Paddings
+$gaps: (
+    xxs: 4px,
+    xs: 8px,
+    sm: 16px,
+    md: 24px,
+    lg: 32px,
+    xl: 48px,
+    xxl: 60px
+);
+
+//Breakpoints
+$breakpoints: (
+    sm: 768px,
+    md: 1024px,
+    lg: 1200px,
+    xl: 1440px
+)

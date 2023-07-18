@@ -1,0 +1,18 @@
+@use "index" as *;
+
+.img-container {
+    background-image: Img("pattern_angular.png", "bg");
+}
+
+.content-box {
+    position: relative;
+}
+
+.custom-card {
+   // background-color: Color(warning);
+}
+
+.bla {
+    background-color: Color(primary);
+    //color: $warning
+}

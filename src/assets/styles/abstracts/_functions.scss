@@ -1,0 +1,45 @@
+@use 'variables' as *;
+@use 'theming' as *;
+@use 'sass:map';
+
+@function Path($type) {
+  @return map-get($paths, $type);
+}
+
+@function Asset($path, $file) {
+  @return url(Path(assets) + '/' + $path + '/' + $file);
+}
+
+@function Img($file, $type: null) {
+  $filePath: $file;
+  $types: (
+          bg: 'bg'
+  );
+
+  @if ($type) {
+    $filePath: map.get($types, $type) + '/' + $file;
+  }
+
+  @return Asset('images', $filePath);
+}
+
+@function LineHeight($size) {
+  @return map-get($lineHeights, $size);
+}
+
+@function Gap($size) {
+  @return map-get($gaps, $size);
+}
+
+@function FontSize($size) {
+  @return map-get($fontSizes, $size);
+}
+
+@function Breakpoint($size) {
+  @return map-get($breakpoints, $size);
+}
+
+
+@function Color($color) {
+  @return map-get($theme-colors, $color);
+}

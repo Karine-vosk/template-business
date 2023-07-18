@@ -1,0 +1,67 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+ html {
+    box-sizing: border-box;
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+:root {
+    --swiper-theme-color: transparent !important;
+}
+
+html, body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+div {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    &:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+ul,
+li,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+small {
+    font-weight: inherit !important;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}

@@ -1,0 +1,37 @@
+@use "../abstracts/index" as *;
+
+%text,
+.text {
+    font-weight: normal;
+    line-height: LineHeight(sm);
+    color: Color(text-primary);
+    &--xs {
+        font-size: FontSize(xs);
+    }
+    &--sm {
+        font-size: FontSize(sm);
+    }
+    &--md {
+        font-size: FontSize(md);
+        line-height: LineHeight(lg);
+    }
+    &--lg {
+        font-size: FontSize(lg);
+        line-height: LineHeight(lg);
+    }
+    &--bold {
+        font-weight: 500;
+    }
+    &--secondary {
+        color: Color(text-secondary);
+    }
+    &--success {
+        color: Color(success);
+    }
+    &--attention {
+        color: Color(error);
+    }
+    &--break-word {
+        word-break: break-word;
+    }
+}
