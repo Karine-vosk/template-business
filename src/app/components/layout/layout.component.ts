@@ -31,19 +31,19 @@ export class LayoutComponent {
       color: 'red'
     },
     {
-      icon: 'user',
+      icon: 'account_circle',
       title: 'Pages',
       description: 'This extension also comes with 3 sample pages. They are fully coded so you can start working instantly.',
       color: 'red'
     },
     {
-      icon: '',
+      icon: 'inbox',
       title: 'JavaScript Components',
       description: 'We also feature many dynamic components for React, NextJS, Vue and Angular.',
       color: 'red'
     },
     {
-      icon: '',
+      icon: 'insert_comment',
       title: 'Documentation',
       description: 'Built by developers for developers. You will love how easy is to to work with Notus Angular.',
       color: 'red'

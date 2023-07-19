@@ -13,3 +13,16 @@
 }
 
 
+.wrap-list {
+    width: 100%;
+}
+
+.wrap-img {
+    width: 100%;
+}
+
+.section {
+    &--grey {
+        background-color: Color(grey)
+    }
+}
