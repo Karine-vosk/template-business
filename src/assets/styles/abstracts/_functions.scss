@@ -39,7 +39,6 @@
   @return map-get($breakpoints, $size);
 }
 
-
 @function Color($color) {
   @return map-get($theme-colors, $color);
 }
