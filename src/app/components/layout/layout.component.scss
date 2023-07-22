@@ -1,15 +1,38 @@
 @use "index" as *;
 
 .img-container {
-    background-image: Img("pattern_angular.png", "bg");
+  background-image: Img("pattern_angular.png", "bg");
 }
 
 .content-box {
-    position: relative;
+  position: relative;
 }
 
 .custom-card {
-   background-color: Color(warn);
+  background-color: Color(warn);
+  max-width: 400px;
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+::ng-deep.custom-tile{
+  overflow: auto !important;
+}
+
+.list__right {
+  width: 100%;
+}
+
+.section {
+  &--grey {
+    background-color: Color(grey);
+  }
+}
+
+::ng-deep.custom-tile >.mat-grid-tile-content {
+  justify-content: flex-start;
 }
 
 

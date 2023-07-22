@@ -1,0 +1,9 @@
+<mat-card color="warning" class="info-frame" [ngClass]="'info-frame--'+ frameColor">
+
+  <app-icon [iconColor]="frameIconColor" [iconName]="frameIcon"></app-icon>
+  <div class="info-frame__box">
+      <mat-card-header> {{frameTitle}}</mat-card-header>
+      <mat-card-content> {{frameDescription}}</mat-card-content>
+  </div>
+</mat-card>
+

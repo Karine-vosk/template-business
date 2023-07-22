@@ -1,50 +1,64 @@
 <section>
-    <div class="custom-container">
-        <h2>
-            Our Project
-        </h2>
-        <p>
-            decription
-        </p>
-        <div>
-            <button mat-raised-button>Basic</button>
-            <button mat-raised-button color="primary">Primary</button>
-        </div>
+  <div class="custom-container">
+    <h2>
+      Our Project
+    </h2>
+    <p>
+      decription
+    </p>
+    <div>
+      <button mat-raised-button>Basic</button>
+      <button mat-raised-button color="primary">Primary</button>
     </div>
-    <div class="img-container">
+  </div>
+  <div class="img-container">
 
-    </div>
+  </div>
 </section>
 <!-- second section -->
-<section>
-    <div class="custom-container">
-      <div>
-        <mat-card color="warning" class="custom-card">
-          <img mat-card-image src="../../../assets/images/bg/second-bg.png">
-          <div class="content-box">
+<section class="section--grey">
+  <div class="custom-container">
+    <div>
+      <mat-grid-list cols="2" rowHeight="2:1">
+        <mat-grid-tile class="custom-tile">
+          <mat-card color="warning" class="custom-card">
+            <img class="custom-card__img" mat-card-image src="../../../assets/images/bg/second-bg.png">
+            <div class="content-box">
               <mat-card-header> our header</mat-card-header>
               <mat-card-content> our content</mat-card-content>
-          </div>
-      </mat-card>
-      <div>
-        <app-icon [iconColor]="'red'" [iconName]="iconName"></app-icon>
-
-        <mat-grid-list cols="2" rowHeight="2:1">
-          <ng-container *ngFor="let item of projects">
-            <mat-grid-tile>
-              <app-info-card [cardIcon]="item.icon" [cardIconColor]="item.color" [cardDescription]="item.description" [cardTitle]="item.title" [cardColor]="'blue'"></app-info-card>
-            </mat-grid-tile>
-          </ng-container>
-
-
-          <!-- <mat-grid-tile>2</mat-grid-tile>
-          <mat-grid-tile>3</mat-grid-tile>
-          <mat-grid-tile>4</mat-grid-tile> -->
-        </mat-grid-list>
-      </div>
-      </div>
-
+            </div>
+          </mat-card>
+        </mat-grid-tile>
+        <!-- frame info -->
+        <mat-grid-tile>
+          <mat-grid-list cols="2"
+            rowHeight="2:1"
+            class="list__right">
+            <ng-container *ngFor="let item of projects">
+              <mat-grid-tile>
+                <app-info-frame [frameIcon]="item.icon"
+                    [frameIconColor]="item.color"
+                    [frameDescription]="item.description"
+                    [frameTitle]="item.title">
+                </app-info-frame>
+              </mat-grid-tile>
+            </ng-container>
+          </mat-grid-list>
+        </mat-grid-tile>
+      </mat-grid-list>
 
     </div>
-</section>
 
+
+  </div>
+</section>
+<!-- <section>
+  <mat-grid-list cols="2" rowHeight="2:1">
+    <ng-container *ngFor="let item of projects">
+      <mat-grid-tile>
+        <app-info-card [cardIcon]="item.icon" [cardIconColor]="item.color" [cardDescription]="item.description"
+          [cardTitle]="item.title" [cardColor]="'blue'"></app-info-card>
+      </mat-grid-tile>
+    </ng-container>
+  </mat-grid-list>
+</section> -->

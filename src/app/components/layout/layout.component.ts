@@ -5,8 +5,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {IconComponent} from '../icon/icon.component';
 import {InfoCardComponent} from '../info-card/info-card.component';
+import {InfoFrameComponent} from '../info-frame/info-frame.component';
 
-interface IProjects {
+interface IInfo {
   icon: string,
   title: string,
   description: string,
@@ -16,15 +17,42 @@ interface IProjects {
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent],
+  imports: [CommonModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
 export class LayoutComponent {
   isBox: boolean = true;
   iconName: string = 'home';
-  projects: IProjects[] = [
+  projects: IInfo[] = [
    {
+      icon: 'home',
+      title: 'css components',
+      description: 'Notus Angular comes with a huge number of Fully Coded CSS components.',
+      color: 'red'
+    },
+    {
+      icon: 'user',
+      title: 'Pages',
+      description: 'This extension also comes with 3 sample pages. They are fully coded so you can start working instantly.',
+      color: 'red'
+    },
+    {
+      icon: '',
+      title: 'JavaScript Components',
+      description: 'We also feature many dynamic components for React, NextJS, Vue and Angular.',
+      color: 'red'
+    },
+    {
+      icon: '',
+      title: 'Documentation',
+      description: 'Built by developers for developers. You will love how easy is to to work with Notus Angular.',
+      color: 'red'
+    }
+  ];
+
+  cardInfo: IInfo[] = [
+    {
       icon: 'home',
       title: 'css components',
       description: 'Notus Angular comes with a huge number of Fully Coded CSS components.',
