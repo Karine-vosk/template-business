@@ -15,5 +15,5 @@ export class InfoCardComponent {
   @Input() cardIconColor: string = '';
   @Input() cardTitle: string = '';
   @Input() cardDescription: string = '';
-  @Input() cardColor: string = '';
+  @Input() cardColor: string = 'transparent';
 }

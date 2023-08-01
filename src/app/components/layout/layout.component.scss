@@ -6,19 +6,39 @@
 
 .content-box {
   position: relative;
+  min-height: 240px;
+
 }
 
 .custom-card {
   background-color: Color(warn);
   max-width: 400px;
+  &__img-box {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 40px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      background-color: Color(warn);
+      transform-origin: top right;
+      transform: skewY(-3deg);
+      background-color: linear-gradient(135deg, #eceddc 25%, transparent 25%);
+     }
+  }
   &__img {
     width: 100%;
     height: 100%;
+
   }
 
 }
 ::ng-deep.custom-tile{
-  overflow: auto !important;
+  overflow: inherit !important;
+  position: inherit !important;
 }
 
 .list__right {
@@ -36,3 +56,55 @@
 }
 
 
+.wrap-list {
+    width: 100%;
+}
+
+.wrap-img {
+    width: 100%;
+}
+
+.section {
+    &--grey {
+        background-color: Color(grey)
+    }
+}
+
+
+
+.right-tile {
+  padding-top: 0 !important;
+  overflow: inherit !important;
+}
+
+
+.list {
+  width: 100%;
+}
+
+
+.tile--overflow {
+  overflow: inherit !important;
+}
+
+.tile--padding {
+  padding: 0 !important;
+}
+
+
+.custom-footer {
+  background-color: transparent !important;
+  &__text {
+    margin-right: Gap(xs) !important;
+    color: Color(grey) !important
+  }
+}
+
+
+.card--list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 10px; */
+  grid-auto-rows: minmax(100px, auto);
+  height: 100%;
+}

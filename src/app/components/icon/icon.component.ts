@@ -11,6 +11,6 @@ import {MatCardModule} from '@angular/material/card';
 })
 export class IconComponent {
   @Input() iconName: string = '';
-  @Input() isBox: boolean = false;
+  @Input() isBox: boolean = true;
   @Input() iconColor: string = '';
 }

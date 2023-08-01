@@ -14,6 +14,15 @@ interface IInfo {
   color: string
 }
 
+interface IInfoColor extends IInfo {
+  icon: string,
+  title: string,
+  description: string,
+  color: string,
+  cardColor: string;
+  className: string
+}
+
 @Component({
   selector: 'app-layout',
   standalone: true,
@@ -32,19 +41,19 @@ export class LayoutComponent {
       color: 'red'
     },
     {
-      icon: 'user',
+      icon: 'account_circle',
       title: 'Pages',
       description: 'This extension also comes with 3 sample pages. They are fully coded so you can start working instantly.',
       color: 'red'
     },
     {
-      icon: '',
+      icon: 'inbox',
       title: 'JavaScript Components',
       description: 'We also feature many dynamic components for React, NextJS, Vue and Angular.',
       color: 'red'
     },
     {
-      icon: '',
+      icon: 'insert_comment',
       title: 'Documentation',
       description: 'Built by developers for developers. You will love how easy is to to work with Notus Angular.',
       color: 'red'
@@ -77,6 +86,35 @@ export class LayoutComponent {
       color: 'red'
     }
   ];
+
+  section3: IInfoColor[] = [
+    {
+      icon: 'home',
+      title: 'Excelent services',
+      description: 'some quick example text to build on the card titlw and make up the bulk of the card\'s content.',
+      color: '#fff235',
+      cardColor: 'white',
+      className: 'first'
+    },
+    {
+      icon: 'home',
+      title: 'Free Revisions',
+      description: 'keep you user engaged by providing  meaningful information. Remember that by this time, the user is curious.',
+      color: 'red',
+      cardColor: 'black',
+      className: 'second'
+    },
+    {
+      icon: 'home',
+      title: 'Romina',
+      description: 'Developer',
+      color: 'red',
+      cardColor: 'white',
+      className: 'third'
+    },
+  ];
+
+  componentsName :string[] = ['Buttons', 'Inputs', 'Menus', 'Labels', 'Tabs', 'Pagination']
 
   ngOnInit(): void {
 

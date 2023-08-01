@@ -1,0 +1,10 @@
+@use '../abstracts/index';
+
+.text-box {
+  background-color: Color(primary);
+  padding: Gap(xs);
+  border-radius: 8px;
+  font-weight: normal;
+  line-height: LineHeight(xs);
+  font-size: FontSize(xs);
+}
