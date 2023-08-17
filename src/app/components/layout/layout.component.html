@@ -1,103 +1,127 @@
-<section>
-  <div class="custom-container">
-    <h2>
-      Our Project
-    </h2>
-    <p>
-      decription
-    </p>
-    <div>
-      <button mat-raised-button>Basic</button>
-      <button mat-raised-button color="primary">Primary</button>
+<ng-container *ngIf="false">
+  <section>
+    <div class="custom-container">
+      <h2>
+        Our Project
+      </h2>
+      <p>
+        decription
+      </p>
+      <div>
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">Primary</button>
+      </div>
     </div>
-  </div>
-  <div class="img-container">
-
-  </div>
-</section>
-<!-- second section -->
-<section class="section--grey">
-  <div class="custom-container">
-    <div>
+    <div class="img-container">
+  
+    </div>
+  </section>
+  <!-- second section -->
+  <section class="section--grey">
+    <div class="custom-container">
+      <div>
+        <mat-grid-list cols="2" rowHeight="2:1">
+          <mat-grid-tile class="custom-tile">
+            <mat-card color="warning" class="custom-card">
+              <div class="custom-card__img-box">
+                <img class="custom-card__img" mat-card-image src="../../../assets/images/bg/second-bg.png">
+              </div>
+  
+              <div class="content-box">
+                <mat-card-header> our header</mat-card-header>
+                <mat-card-content> our content</mat-card-content>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+          <!-- frame info -->
+          <mat-grid-tile class="right-tile">
+            <mat-grid-list cols="2"
+              rowHeight="2:1"
+              gutterSize="5px"
+              class="list__right">
+              <ng-container *ngFor="let item of projects">
+                <mat-grid-tile colspan="1" [rowspan]="2">
+                  <app-info-frame [frameIcon]="item.icon"
+                      [frameIconColor]="item.color"
+                      [frameDescription]="item.description"
+                      [frameTitle]="item.title">
+                  </app-info-frame>
+                </mat-grid-tile>
+              </ng-container>
+            </mat-grid-list>
+          </mat-grid-tile>
+        </mat-grid-list>
+  
+      </div>
+  
+  
+    </div>
+  </section>
+  <!-- 3 section -->
+  <section class="section--grey">
+    <div class="custom-container">
       <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile class="custom-tile">
-          <mat-card color="warning" class="custom-card">
-            <div class="custom-card__img-box">
-              <img class="custom-card__img" mat-card-image src="../../../assets/images/bg/second-bg.png">
+        <!-- first column -->
+       <mat-grid-tile>
+         <app-info-frame [frameIcon]="'home'"
+           [frameIconColor]="'#ffffff'"
+           [frameDescription]="'Every element that you need in a product comes built in as a component. All components fit perfectly with each other and can have different colors.'"
+           [frameTitle]="'CSS Components'">
+        </app-info-frame>
+        <mat-grid-tile-footer class="custom-footer">
+          <ng-container *ngFor="let item of componentsName">
+            <div class="text-box custom-footer__text">
+              {{item}}
             </div>
-
-            <div class="content-box">
-              <mat-card-header> our header</mat-card-header>
-              <mat-card-content> our content</mat-card-content>
-            </div>
-          </mat-card>
-        </mat-grid-tile>
-        <!-- frame info -->
-        <mat-grid-tile class="right-tile">
-          <mat-grid-list cols="2"
-            rowHeight="2:1"
-            gutterSize="5px"
-            class="list__right">
-            <ng-container *ngFor="let item of projects">
-              <mat-grid-tile colspan="1" [rowspan]="2">
-                <app-info-frame [frameIcon]="item.icon"
-                    [frameIconColor]="item.color"
-                    [frameDescription]="item.description"
-                    [frameTitle]="item.title">
-                </app-info-frame>
-              </mat-grid-tile>
-            </ng-container>
-          </mat-grid-list>
-        </mat-grid-tile>
-      </mat-grid-list>
-
+          </ng-container>
+  
+  
+        </mat-grid-tile-footer>
+       </mat-grid-tile>
+         <!-- second column -->
+  
+           <mat-grid-tile>
+            <div class="card--list">
+               <ng-container *ngFor="let item of section3">
+  
+                   <app-info-card [cardIcon]="item.icon"
+                     [cardIconColor]="item.color"
+                     [cardDescription]="item.description"
+                     [cardTitle]="item.title"
+                     [cardColor]="item.cardColor">
+                   </app-info-card>
+  
+               </ng-container>
+              </div>
+           </mat-grid-tile>
+  
+  
+     </mat-grid-list>
     </div>
+    <button nz-button nzType="primary">Primary Button</button>
+    <button nz-button nzType="primary" nzDanger>Primary</button>
+    <button nz-button nzType="default" nzDanger>Default</button>
+  
+  </section> 
+</ng-container>
 
-
-  </div>
-</section>
-<!-- 3 section -->
-<section class="section--grey">
-  <div class="custom-container">
-    <mat-grid-list cols="2" rowHeight="2:1">
-      <!-- first column -->
-     <mat-grid-tile>
-       <app-info-frame [frameIcon]="'home'"
-         [frameIconColor]="'#ffffff'"
-         [frameDescription]="'Every element that you need in a product comes built in as a component. All components fit perfectly with each other and can have different colors.'"
-         [frameTitle]="'CSS Components'">
-      </app-info-frame>
-      <mat-grid-tile-footer class="custom-footer">
-        <ng-container *ngFor="let item of componentsName">
-          <div class="text-box custom-footer__text">
-            {{item}}
-          </div>
-        </ng-container>
-
-
-      </mat-grid-tile-footer>
-     </mat-grid-tile>
-       <!-- second column -->
-
-         <mat-grid-tile>
-          <div class="card--list">
-             <ng-container *ngFor="let item of section3">
-
-                 <app-info-card [cardIcon]="item.icon"
-                   [cardIconColor]="item.color"
-                   [cardDescription]="item.description"
-                   [cardTitle]="item.title"
-                   [cardColor]="item.cardColor">
-                 </app-info-card>
-
-             </ng-container>
-            </div>
-         </mat-grid-tile>
-
-
-   </mat-grid-list>
-  </div>
-
-
-
-</section>
+<nz-layout>
+  <nz-header>
+    <div class="logo"></div>
+    <ul nz-menu nzTheme="dark" nzMode="horizontal">
+      <li nz-menu-item>nav 1</li>
+      <li nz-menu-item>nav 2</li>
+      <li nz-menu-item>nav 3</li>
+    </ul>
+  </nz-header>
+  <nz-content>
+    <!-- <nz-breadcrumb>
+      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
+      <nz-breadcrumb-item>List</nz-breadcrumb-item>
+      <nz-breadcrumb-item>App</nz-breadcrumb-item>
+    </nz-breadcrumb> -->
+    <div class="inner-content">Content</div>
+  </nz-content>
+  <app-icon></app-icon>
+  <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
+</nz-layout>

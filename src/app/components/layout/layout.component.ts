@@ -6,6 +6,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {IconComponent} from '../icon/icon.component';
 import {InfoCardComponent} from '../info-card/info-card.component';
 import {InfoFrameComponent} from '../info-frame/info-frame.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzLayoutModule } from 'ng-zorro-antd/layout';
 
 interface IInfo {
   icon: string,
@@ -26,7 +28,7 @@ interface IInfoColor extends IInfo {
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent],
+  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
