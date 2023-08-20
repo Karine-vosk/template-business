@@ -1,17 +1,13 @@
-@use "index" as *;
 
-.img-container {
-  background-image: Img("pattern_angular.png", "bg");
-}
+
+
 
 .content-box {
   position: relative;
   min-height: 240px;
-
 }
 
 .custom-card {
-  background-color: Color(warn);
   max-width: 400px;
   &__img-box {
     position: relative;
@@ -23,7 +19,6 @@
       bottom: 0;
       left: 0;
       z-index: 1;
-      background-color: Color(warn);
       transform-origin: top right;
       transform: skewY(-3deg);
       background-color: linear-gradient(135deg, #eceddc 25%, transparent 25%);
@@ -47,7 +42,6 @@
 
 .section {
   &--grey {
-    background-color: Color(grey);
   }
 }
 
@@ -66,7 +60,6 @@
 
 .section {
     &--grey {
-        background-color: Color(grey)
     }
 }
 
@@ -95,8 +88,7 @@
 .custom-footer {
   background-color: transparent !important;
   &__text {
-    margin-right: Gap(xs) !important;
-    color: Color(grey) !important
+   
   }
 }
 
@@ -109,6 +101,10 @@
   height: 100%;
 }
 
+// antd
+nz-header {
+
+}
 
 .logo {
   width: 120px;

@@ -9,7 +9,9 @@
   justify-content: center;
 
 &__icon {
- 
+  &--grey {
+   color: rgba(91, 92, 121, 1)
+  }
 
   &--red {
     

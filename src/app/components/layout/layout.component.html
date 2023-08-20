@@ -107,21 +107,74 @@
 
 <nz-layout>
   <nz-header>
-    <div class="logo"></div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal">
-      <li nz-menu-item>nav 1</li>
-      <li nz-menu-item>nav 2</li>
-      <li nz-menu-item>nav 3</li>
-    </ul>
+    <div nz-row>
+      <div nz-col nzSpan="12"> 
+        <div class="logo"></div>   
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-row nzJustify="end" nzAlign="middle">
+          <nz-space>
+            <app-icon *nzSpaceItem
+              [iconType]="'mail'" 
+              [iconColor]="'grey'"
+              [isBox]="false"/>
+            <app-icon *nzSpaceItem
+              [iconType]="'twitter'"
+              [iconColor]="'grey'"
+              [isBox]="false"/>
+            <button *nzSpaceItem
+              nz-button 
+              nzType="primary"
+              nzDanger>
+              Primary Button
+            </button>
+          </nz-space>
+          
+        </nz-row>        
+      </div>
+    </div>
+   
   </nz-header>
-  <nz-content>
-    <!-- <nz-breadcrumb>
-      <nz-breadcrumb-item>Home</nz-breadcrumb-item>
-      <nz-breadcrumb-item>List</nz-breadcrumb-item>
-      <nz-breadcrumb-item>App</nz-breadcrumb-item>
-    </nz-breadcrumb> -->
-    <div class="inner-content">Content</div>
+  <nz-content>   
+    <div class="inner-content">
+       <!-- section1 -->
+       <section>
+        <div nz-row [nzGutter]="[0, 8]" nzAlign="middle">
+          <div nz-col nzSpan="12">
+            <h1>
+              Notus Angular - A beautiful extension for Tailwind CSS.
+
+            </h1>
+            <p>
+              Notus Angular is Free and Open Source. It does not change any of the CSS from Tailwind CSS. It features multiple HTML elements and it comes with dynamic components for ReactJS, Vue and Angular.
+
+
+
+            </p>
+            <div nz-row>
+              <nz-space>
+                <button *nzSpaceItem
+                  nz-button 
+                  nzType="primary"
+                  nzDanger>
+                  Primary Button
+                </button>
+                <button *nzSpaceItem
+                  nz-button 
+                  nzType="primary">
+                Primary Button
+               </button>
+              </nz-space>
+            </div>
+          </div>
+          <div nz-col nzSpan="12" class="img-container">
+            
+
+          </div>
+        </div>
+      </section>
+    </div>
   </nz-content>
-  <app-icon></app-icon>
+
   <nz-footer>Ant Design ©2020 Implement By Angular</nz-footer>
 </nz-layout>

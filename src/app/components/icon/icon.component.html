@@ -1,37 +1,3 @@
 <div [ngClass]="isBox ? 'icon-box' : null">
-  <span class="material-icons icon-box__icon"
-   [ngClass]="'icon-box__icon--' + iconColor">
-   {{iconName}}
-  </span>
+  <span nz-icon [nzType]="iconType" [ngClass]="'icon-box__icon--' + iconColor"> </span>
 </div>
-
-<!-- <span nz-icon [nzIconfont]="'icon-tuichu'"></span>
-<span nz-icon nzType="step-backward" nzTheme="outline"></span> -->
-
-<!-- <span nz-icon [nzType]="'star'" [nzTheme]="'fill'"></span>
-<span nz-icon [nzType]="'account-book'" nzTheme="fill"></span> -->
-<!-- 
-<span class="trigger"
-               nz-icon
-               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-            ></span> -->
-
-            <span li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="chname"></span>
-            <nz-icon [nzIcon]="'chname'" nzTheme="outline"></nz-icon> 
-            <span nz-icon type="mail"></span>
-
-
-            <!-- basic -->
-            <div class="icons-list">
-       <span nz-icon [nzType]="'home'"></span>
-       <span nz-icon [nzType]="'setting'" [nzTheme]="'fill'"></span>
-      <hr>
-       <span nz-icon [nzType]="'close'" [nzTheme]="'fill'"></span>
-       <!-- static -->
-      <span nz-icon [nzType]="closeIcon" [nzTheme]="'outline'"></span> 
-      <hr>
-      <span nz-icon [nzType]="chname" [nzTheme]="'outline'"></span> copied
-      <hr> 
-      <span nz-icon [nzType]="mail" [nzTheme]="'outline'"></span> mail 
-     
-    </div>

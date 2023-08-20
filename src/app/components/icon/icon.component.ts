@@ -6,7 +6,7 @@ import {MatCardModule} from '@angular/material/card';
 import { CheckOutline, CloseOutline } from '@ant-design/icons-angular/icons'; // Import icons you want to use
 import { NzIconModule } from 'ng-zorro-antd/icon';
 
-import { MailOutline, AlertOutline } from '@ant-design/icons-angular/icons';
+import { MailOutline, AlertOutline, FacebookOutline, TwitterOutline } from '@ant-design/icons-angular/icons';
 @Component({
   selector: 'app-icon',
   standalone: true,
@@ -16,7 +16,7 @@ import { MailOutline, AlertOutline } from '@ant-design/icons-angular/icons';
   styleUrls: ['./icon.component.scss']
 })
 export class IconComponent {
-  @Input() iconName: string = '';
+  @Input() iconType: string = '';
   @Input() isBox: boolean = true;
   @Input() iconColor: string = '';
 
@@ -25,5 +25,7 @@ export class IconComponent {
 
   isCollapsed: boolean = true
   chname = CheckOutline.name;
+  fb = FacebookOutline.name;
+  twitter = TwitterOutline.name
   
 }

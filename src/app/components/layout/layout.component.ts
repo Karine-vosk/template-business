@@ -8,6 +8,8 @@ import {InfoCardComponent} from '../info-card/info-card.component';
 import {InfoFrameComponent} from '../info-frame/info-frame.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzGridModule } from 'ng-zorro-antd/grid';
+import { NzSpaceModule } from 'ng-zorro-antd/space';
 
 interface IInfo {
   icon: string,
@@ -28,7 +30,7 @@ interface IInfoColor extends IInfo {
 @Component({
   selector: 'app-layout',
   standalone: true,
-  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent],
+  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent, NzGridModule, NzSpaceModule, NzButtonModule],
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
