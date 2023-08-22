@@ -135,3 +135,15 @@ nz-footer {
   padding: 24px;
   min-height: 280px;
 }
+
+.img-container {  
+  height: 100%;
+  width: auto;
+  background-image: url("../../../assets/images/bg/pattern_angular.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.section_img {
+  height: 500px;
+}
