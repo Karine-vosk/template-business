@@ -176,11 +176,21 @@
 
         <div nz-row [nzGutter]="[0, 8]">
           <div nz-col nzSpan="12">
-            
-           
+         
+            <nz-card style="width:100%" [nzCover]="coverTemplate" class="custom-card">
+              <nz-card-meta nzTitle="Great for your awesome project"
+              nzDescription="Putting together a page has never been easier than matching together pre-made components. 
+              From landing pages presentation to login areas, you can easily customise and built your pages."></nz-card-meta>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="../../../assets/images/bg/second-bg.png" />
+            </ng-template>          
             
           </div>
-          <div nz-col nzSpan="12" class="img-container">      
+          <div nz-col nzSpan="12">   
+            <div nz-row>
+              
+            </div>   
           </div>
         </div>
       </section>

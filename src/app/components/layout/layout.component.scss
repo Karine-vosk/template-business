@@ -1,7 +1,3 @@
-
-
-
-
 .content-box {
   position: relative;
   min-height: 240px;
@@ -9,8 +5,10 @@
 
 .custom-card {
   max-width: 400px;
-  &__img-box {
+
+  .ant-card-cover {
     position: relative;
+
     &::before {
       position: absolute;
       content: "";
@@ -22,8 +20,9 @@
       transform-origin: top right;
       transform: skewY(-3deg);
       background-color: linear-gradient(135deg, #eceddc 25%, transparent 25%);
-     }
+    }
   }
+
   &__img {
     width: 100%;
     height: 100%;
@@ -31,6 +30,7 @@
   }
 
 }
+
 // ::ng-deep.custom-tile{
 //   overflow: inherit !important;
 //   position: inherit !important;
@@ -41,26 +41,24 @@
 }
 
 .section {
-  &--grey {
-  }
+  &--grey {}
 }
 
-::ng-deep.custom-tile >.mat-grid-tile-content {
+::ng-deep.custom-tile>.mat-grid-tile-content {
   justify-content: flex-start;
 }
 
 
 .wrap-list {
-    width: 100%;
+  width: 100%;
 }
 
 .wrap-img {
-    width: 100%;
+  width: 100%;
 }
 
 .section {
-    &--grey {
-    }
+  &--grey {}
 }
 
 
@@ -87,9 +85,8 @@
 
 .custom-footer {
   background-color: transparent !important;
-  &__text {
-   
-  }
+
+  &__text {}
 }
 
 
@@ -102,9 +99,7 @@
 }
 
 // antd
-nz-header {
-
-}
+nz-header {}
 
 .logo {
   width: 120px;
@@ -136,7 +131,7 @@ nz-footer {
   min-height: 280px;
 }
 
-.img-container {  
+.img-container {
   height: 100%;
   width: auto;
   background-image: url("../../../assets/images/bg/pattern_angular.png");
@@ -146,4 +141,31 @@ nz-footer {
 
 .section_img {
   height: 500px;
+}
+
+.custom-card {
+  background-color: red;
+}
+
+::ng-deep .ant-card-cover {
+  position: relative;
+  margin: 0 !important;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 40px;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    transform-origin: top right;
+    background-color: red;
+    transform: skewY(-3deg);
+    background-color: linear-gradient(135deg, #eceddc 25%, transparent 25%);
+  }
+}
+
+
+::ng-deep .ant-card-body {
+ // background-color: red;
 }
