@@ -1,9 +1,11 @@
-<mat-card color="warning" class="info-frame" [ngClass]="'info-frame--'+ frameColor">
-
-  <!-- <app-icon [iconColor]="frameIconColor" [iconName]="frameIcon"></app-icon> -->
+<div class="info-frame" [ngClass]="'info-frame--' + frameColor">
+  <app-icon
+    [iconColor]="frameIconColor"
+    [iconType]="frameIcon"
+    [isBox]="false"
+  ></app-icon>
   <div class="info-frame__box">
-      <mat-card-header> {{frameTitle}}</mat-card-header>
-      <mat-card-content> {{frameDescription}}</mat-card-content>
-  </div>
-</mat-card>
-
+    <h3 nz-typography>{{ frameTitle }}</h3>
+    <p nz-typography nzType="secondary">{{ frameDescription }}</p>
+  </div>  
+</div>

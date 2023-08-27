@@ -1,0 +1,260 @@
+<nz-layout>
+  <nz-header>
+    <div nz-row>
+      <div nz-col nzSpan="12"> 
+        <div class="logo"></div>   
+      </div>
+      <div nz-col nzSpan="12">
+        <nz-row nzJustify="end" nzAlign="middle">
+          <nz-space>
+            <app-icon *nzSpaceItem
+              [iconType]="'mail'" 
+              [iconColor]="'grey'"
+              [isBox]="false"/>
+            <app-icon *nzSpaceItem
+              [iconType]="'twitter'"
+              [iconColor]="'grey'"
+              [isBox]="false"/>
+            <button *nzSpaceItem
+              nz-button 
+              nzType="primary"
+              nzDanger>
+              Primary Button
+            </button>
+          </nz-space>
+          
+        </nz-row>        
+      </div>
+    </div>
+   
+  </nz-header>
+  <nz-content>   
+    <div class="inner-content">
+       <!-- section1 -->
+       <section class="section-grey">
+        <div nz-row [nzGutter]="[0, 24]" nzAlign="middle" class="section_img">          
+          <div nz-col nzSpan="12">
+            <nz-space nzDirection="vertical" nzSize="large">
+            
+              <h1 *nzSpaceItem>
+                Notus Angular - A beautiful extension for Tailwind CSS.
+              </h1>
+              <p *nzSpaceItem>
+                Notus Angular is Free and Open Source. It does not change any of the CSS from Tailwind CSS. It features multiple HTML elements and it comes with dynamic components for ReactJS, Vue and Angular.
+
+
+
+              </p>
+              <div nz-row *nzSpaceItem>
+                <nz-space>
+                  <button *nzSpaceItem
+                    nz-button 
+                    nzType="primary"
+                    nzDanger>
+                    Primary Button
+                  </button>
+                  <button *nzSpaceItem
+                    nz-button 
+                    nzType="primary">
+                  Primary Button
+                </button>
+                </nz-space>
+              </div>
+          </nz-space>
+          </div>          
+          <div nz-col nzSpan="12" class="img-container">      
+          </div>
+        </div>
+      </section>
+      <!-- section 2 -->      
+      <section class="section-grey section-margin">
+
+        <div nz-row [nzGutter]="[0, 8]">
+          <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 12, offset: 0 }">
+         
+            <nz-card style="width:100%" [nzCover]="coverTemplate" class="card-transform">
+              <nz-card-meta nzTitle="Great for your awesome project"
+              nzDescription="Putting together a page has never been easier than matching together pre-made components. 
+              From landing pages presentation to login areas, you can easily customise and built your pages."></nz-card-meta>
+            </nz-card>
+            <ng-template #coverTemplate>
+              <img alt="example" src="../../../assets/images/bg/second-bg.png" />
+            </ng-template>          
+            
+          </div>
+         
+          <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 12, offset: 0 }">   
+            <div nz-row [nzGutter]="{ xs: 8, sm: 16, md: 24, lg: 32 }">
+              <ng-container  *ngFor="let item of section2Info">
+              <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{span: 12, offset: 0}" >
+                <app-info-frame [frameIcon]="item.icon"
+                [frameIconColor]="item.color"
+                [frameDescription]="item.description"
+                [frameTitle]="item.title"/>
+              </div>
+            </ng-container>           
+            </div>   
+          </div>
+        </div>
+      </section>
+
+      <!-- section 3 -->
+      <section class="section-grey section-margin">
+        <div nz-row>
+          <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 8, offset: 0 }">
+            <div>
+              <app-info-frame [frameIcon]="'home'"
+              [frameIconColor]="'#ffffff'"
+              [frameDescription]="'Every element that you need in a product comes built in as a component. All components fit perfectly with each other and can have different colors.'"
+              [frameTitle]="'CSS Components'"/>
+            </div>
+            <app-item-list [items]="cssComponentsName"/>
+          </div>
+          <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 16, offset: 0 }">
+            <div nz-row >
+              <ng-container *ngFor="let item of section3">
+                <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{span: 12, offset: 0}">
+                  <app-info-card [cardIcon]="item.icon"
+                  [cardIconColor]="item.color"
+                  [cardDescription]="item.description"
+                  [cardTitle]="item.title"
+                  [cardColor]="item.cardColor" />
+                </div>
+              </ng-container>
+            </div>
+          </div>
+  
+        </div>
+      </section>
+    <!-- section 4 -->
+    <section class="section-grey section-margin">
+      <div nz-row>
+        <div nz-col nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 16, offset: 0 }">
+          <div nz-row>
+            <ng-container *ngFor="let item of section4">
+              <nz-col>
+                <app-info-card 
+                [cardIcon]="item.icon"
+                  [cardIconColor]="item.color"
+                  [cardTitle]="item.title"
+                  [cardColor]="item.cardColor"/>        
+                    </nz-col>
+            </ng-container>
+          </div>
+        </div>
+        <div nz-col nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 8, offset: 0 }">
+          <app-info-frame [frameIcon]="'home'"
+          [frameIconColor]="'#ffffff'"
+          [frameDescription]="'In order to create a great User Experience some components require\
+          JavaScript. In this way you can manipulate the elements on the page and give more options\
+           to your users. We created a set of Components that are dynamic and come to help you.'"
+          [frameTitle]="'Javascript Components'"/>
+          <app-item-list [items]="jsComponentsName"/>
+        </div>
+      </div>
+    </section>
+     <!-- section 5 -->
+     <section class="section-grey section-margin">
+      <div nz-row>
+        <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 10, offset: 1 }">
+          <div nz-row>
+            
+              <nz-col>
+                <app-info-frame [frameIcon]="'home'"
+              [frameIconColor]="'#ffffff'"
+              [frameDescription]="'This extension comes a lot of fully coded examples that help you get\
+               started faster. You can adjust the colors and also the programming language.\
+               You can change the text and images and you\'re good to go.'"
+              [frameTitle]="'Complex Documentation'"/>
+
+                    </nz-col>
+          </div>
+        </div>
+        <div nz-col nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 12, offset: 1 }">
+          <div class="bg-image-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-dark-grey section-margin">
+      <div nz-row [nzJustify]="'center'">
+        <h2 nz-typography nz-col>
+          Beautiful Example Pages
+        </h2>        
+      </div>
+      <div nz-row [nzJustify]="'center'">
+        <p nz-typography nzType="secondary" nz-col>
+        Notus Angular is a completly new product built using our past experience in web templates. Take the examples we made for you and start playing with them.
+
+      </p></div>
+      <div nz-row [nzGutter]="8" [nzJustify]="'center'">        
+        <ng-container *ngFor="let item of projectsInfo">
+          <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 8, offset: 0 }">
+           
+              <h3 nz-typography>
+                {{item.title}}
+              </h3>
+              <a href="">
+                <div class="bg bg--{{item.img}}" class="item__shadow"></div>
+            </a>            
+          
+          </div>
+        </ng-container>
+      </div>     
+     <div nz-row class="start-container" nzJustify="center" nzAlign="middle">
+        <h2 nz-typography>
+         Do you love this Starter Kit?
+        </h2>
+        <p nz-typography nzType="secondary">
+          Cause if you do, it can be yours now. Hit the buttons below to navigate to get the Free version for your next project. Build a new web app or give an old project a new look!
+
+        </p>
+        <div nz-row>
+          <nz-space>
+            <button *nzSpaceItem
+              nz-button 
+              nzType="primary"
+              nzDanger>
+              Primary Button
+            </button>
+            <button *nzSpaceItem
+              nz-button 
+              nzType="primary">
+            Primary Button
+           </button>
+          </nz-space>
+        </div>
+     </div>
+    </section>
+    </div>
+  </nz-content>
+
+  <nz-footer>
+    <div nz-row nzJustify="start">
+      <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 12, offset: 0 }">
+        <h3 nz-typography>
+          Let's keep in touch!
+        </h3>
+        <p nz-typography nzType="secondary">
+          Find us on any of these platforms, we respond 1-2 business days.
+        </p>
+      </div>
+      <div nz-col [nzXs]="{ span: 24, offset: 1 }" [nzMd]="{ span: 12, offset: 0 }">
+        <h3 nz-typography>
+          Useful links
+        </h3>
+        <ul nz-menu>
+          <li nz-menu-item>
+            <a href="">Menu 1</a>
+          </li>
+          <li nz-menu-item>
+            <a href="">Menu 2</a>
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+    <nz-divider></nz-divider>
+    Ant Design ©2020 Implement By Angular
+  </nz-footer>
+</nz-layout>

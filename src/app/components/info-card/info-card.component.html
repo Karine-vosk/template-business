@@ -1,9 +1,7 @@
-<mat-card color="warning" class="custom-card" [ngClass]="'custom-card--'+ cardColor">
+<nz-card color="warning" class="custom-card" [ngClass]="'custom-card--'+ cardColor"  [nzCover]="coverTemplate">
 
-  <!-- <img mat-card-image [src]="cardIcon"> -->
-  <!-- <app-icon [iconColor]="cardIconColor" [iconName]="cardIcon"></app-icon> -->
-  <div class="content-box">
-      <mat-card-header> {{cardTitle}}</mat-card-header>
-      <mat-card-content> {{cardDescription}}</mat-card-content>
-  </div>
-</mat-card>
+  <nz-card-meta [nzTitle]="cardTitle" [nzDescription]="cardDescription || ''"></nz-card-meta>
+</nz-card>
+<ng-template #coverTemplate>
+  <app-icon [iconColor]="cardIconColor" [iconType]="cardIcon"/>
+</ng-template>

@@ -3,42 +3,41 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatGridListModule} from '@angular/material/grid-list';
-import {IconComponent} from '../icon/icon.component';
-import {InfoCardComponent} from '../info-card/info-card.component';
-import {InfoFrameComponent} from '../info-frame/info-frame.component';
+import {IconComponent} from '../../components/icon/icon.component';
+import {InfoCardComponent} from '../../components/info-card/info-card.component';
+import {InfoFrameComponent} from '../../components/info-frame/info-frame.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzGridModule } from 'ng-zorro-antd/grid';
 import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzCardModule } from 'ng-zorro-antd/card';
+import { ItemListComponent } from '../../components/item-list/item-list.component';
+import { NzDividerModule } from 'ng-zorro-antd/divider';
+
 
 interface IInfo {
   icon: string,
   title: string,
-  description: string,
+  description?: string,
   color: string
 }
 
 interface IInfoColor extends IInfo {
-  icon: string,
-  title: string,
-  description: string,
-  color: string,
   cardColor: string;
   className: string
 }
 
 @Component({
-  selector: 'app-layout',
+  selector: 'app-template-layout',
   standalone: true,
-  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent, NzGridModule, NzSpaceModule, NzButtonModule, NzCardModule],
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss']
+  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent, NzGridModule, NzSpaceModule, NzButtonModule, NzCardModule, ItemListComponent, NzDividerModule],
+  templateUrl: './template-layout.component.html',
+  styleUrls: ['./template-layout.component.scss']
 })
-export class LayoutComponent {
+export class TemplateLayoutComponent {
   isBox: boolean = true;
   iconName: string = 'home';
-  projects: IInfo[] = [
+  section2Info: IInfo[] = [
    {
       icon: 'home',
       title: 'css components',
@@ -119,7 +118,68 @@ export class LayoutComponent {
     },
   ];
 
-  componentsName :string[] = ['Buttons', 'Inputs', 'Menus', 'Labels', 'Tabs', 'Pagination']
+  section4: IInfoColor[] = [
+    {
+      icon: 'home',
+      title: 'Svelte',
+      color: 'white',
+      cardColor: 'red',
+      className: 'first'
+    },
+    {
+      icon: 'home',
+      title: 'Javascript',
+      color: 'white',
+      cardColor: 'yellow',
+      className: 'second'
+    },
+    {
+      icon: 'home',
+      title: 'ReactJs',
+      color: 'white',
+      cardColor: 'blue',
+      className: 'third'
+    },
+    {
+      icon: 'home',
+      title: 'Angular',
+      color: 'white',
+      cardColor: 'red',
+      className: 'four'
+    },
+    {
+      icon: 'home',
+      title: 'NextJs',
+      color: 'white',
+      cardColor: 'nav',
+      className: 'five'
+    },
+    {
+      icon: 'home',
+      title: 'Vuejs',
+      color: 'white',
+      cardColor: 'blue',
+      className: 'six'
+    },
+  ];
+
+  projectsInfo: any = [
+    {
+      title: "Login page",
+      img: 'login'
+    },
+    {
+      title: "Profile page",
+      img: 'profile'
+    },
+    {
+      title: "Landing page",
+      img: 'landing'
+    }
+  ]
+
+  cssComponentsName :string[] = ['Buttons', 'Inputs', 'Menus', 'Labels', 'Tabs', 'Pagination'];
+  jsComponentsName :string[] = ['Alerts', 'Dropdowns', 'Menus', 'Modals', 'Navbars', 'Popovers', 'Tabs', 'Tooltips'];  
 
   ngOnInit(): void {
 
