@@ -1,11 +1,13 @@
 <div class="info-frame" [ngClass]="'info-frame--' + frameColor">
-  <app-icon
-    [iconColor]="frameIconColor"
-    [iconType]="frameIcon"
-    [isBox]="false"
-  ></app-icon>
-  <div class="info-frame__box">
-    <h3 nz-typography>{{ frameTitle }}</h3>
-    <p nz-typography nzType="secondary">{{ frameDescription }}</p>
-  </div>  
+  <nz-space nzSize="large" nzDirection="vertical">
+    <app-icon *nzSpaceItem [iconColor]="frameIconColor" [iconType]="frameIcon" [isBox]="true" />
+    <div class="info-frame__box" *nzSpaceItem>
+      <h4 nz-typography nzType="secondary">
+        {{ frameTitle }}
+      </h4>
+      <p nz-typography nzType="secondary">
+        {{ frameDescription }}
+      </p>
+    </div>
+  </nz-space>
 </div>

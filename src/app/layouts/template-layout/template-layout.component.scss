@@ -1,14 +1,25 @@
+
+
 .section-grey {
   background-color: #f1f5f9;
 }
 
 .section-margin {
-  padding: 50px 0;
+  padding: 80px 0;
 }
 
-.section-dark-grey {
-  background-color: #475569;
-  padding: 50px;
+
+.theme-box {
+  padding: 50px 0;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top: 20%;
+    background-color: #475569;
+  }
 }
 
 .logo {
@@ -73,12 +84,13 @@ nz-footer {
 .bg-image-2 {
   width: 100%;
   height: 100%;
-  min-height: 500px;
+  min-height: 300px;
   transform: scale(1) perspective(1040px) rotateY(-11deg)
               rotateX(2deg) rotate(2deg);
   background-image: url('../../../assets/images/bg/documentation.png');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background-position: center right;
 }
 
 .bg {
@@ -99,8 +111,8 @@ nz-footer {
 }
 
 .item__shadow {
-  display: block;
-  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),0 4px 6px -2px rgba(0,0,0,0.05);
+
+  box-shadow:rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
   border-radius: 4px;
   &:hover {
     margin-top: -1rem;
@@ -118,8 +130,8 @@ nz-footer {
 .custom-card {
   max-width: 400px;
 
- 
-  
+
+
 
   &__img {
     width: 100%;
@@ -131,6 +143,8 @@ nz-footer {
 
 .card-transform {
   background-color: red;
+  border-radius: 10px;
+  border: none;
 }
 
 ::ng-deep .card-transform .ant-card-cover {
@@ -149,4 +163,9 @@ nz-footer {
     transform: skewY(-3deg);
     background-color: linear-gradient(135deg, #eceddc 25%, transparent 25%);
   }
+}
+
+
+.text-align {
+  text-align: center;
 }

@@ -1,7 +1,12 @@
-<nz-card color="warning" class="custom-card" [ngClass]="'custom-card--'+ cardColor"  [nzCover]="coverTemplate">
+<nz-card color="warning" class="info-card info-card--{{cardColor}} info-card--{{className}}" ngClass="'info-card--'+ cardColor"  [nzCover]="coverTemplate">
 
-  <nz-card-meta [nzTitle]="cardTitle" [nzDescription]="cardDescription || ''"></nz-card-meta>
+  <nz-card-meta [nzTitle]="cardTitle" [nzDescription]="cardDescription || ''"></nz-card-meta >
 </nz-card>
 <ng-template #coverTemplate>
-  <app-icon [iconColor]="cardIconColor" [iconType]="cardIcon"/>
+  <div nz-row nzAlign="middle" nzJustify="center">
+    <div nz-col>
+      <app-icon [iconColor]="cardIconColor" [iconType]="cardIcon" [isBox]="true"/>
+    </div>
+  </div>
+
 </ng-template>

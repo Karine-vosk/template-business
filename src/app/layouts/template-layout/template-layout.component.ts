@@ -13,6 +13,7 @@ import { NzSpaceModule } from 'ng-zorro-antd/space';
 import { NzCardModule } from 'ng-zorro-antd/card';
 import { ItemListComponent } from '../../components/item-list/item-list.component';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import {NzTypographyModule} from 'ng-zorro-antd/typography';
 
 
 interface IInfo {
@@ -30,7 +31,7 @@ interface IInfoColor extends IInfo {
 @Component({
   selector: 'app-template-layout',
   standalone: true,
-  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent, NzGridModule, NzSpaceModule, NzButtonModule, NzCardModule, ItemListComponent, NzDividerModule],
+  imports: [CommonModule, NzLayoutModule, MatButtonModule, MatCardModule, MatGridListModule, IconComponent, InfoCardComponent, InfoFrameComponent, NzButtonModule, IconComponent, NzGridModule, NzSpaceModule, NzButtonModule, NzCardModule, ItemListComponent, NzDividerModule, NzTypographyModule],
   templateUrl: './template-layout.component.html',
   styleUrls: ['./template-layout.component.scss']
 })
@@ -179,7 +180,7 @@ export class TemplateLayoutComponent {
   ]
 
   cssComponentsName :string[] = ['Buttons', 'Inputs', 'Menus', 'Labels', 'Tabs', 'Pagination'];
-  jsComponentsName :string[] = ['Alerts', 'Dropdowns', 'Menus', 'Modals', 'Navbars', 'Popovers', 'Tabs', 'Tooltips'];  
+  jsComponentsName :string[] = ['Alerts', 'Dropdowns', 'Menus', 'Modals', 'Navbars', 'Popovers', 'Tabs', 'Tooltips'];
 
   ngOnInit(): void {
 
