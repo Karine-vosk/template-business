@@ -12,13 +12,25 @@
 .theme-box {
   padding: 50px 0;
   position: relative;
+  overflow: hidden;
+   min-height: 400px;
   &::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 50%;
-    top: 20%;
+    height: 100%;
+    top: 40%;
     background-color: #475569;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background-color: #f1f5f9;
+    transform-origin: top right;
+    transform: skewY(-5deg);
   }
 }
 
@@ -42,9 +54,6 @@ nz-content {
   padding: 0 50px;
 }
 
-nz-footer {
-  text-align: center;
-}
 
 .img-container {
   height: 100%;
@@ -94,11 +103,15 @@ nz-footer {
 }
 
 .bg {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   min-height: 250px;
+  //max-width: 380px;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
+  //background-color: yellow;
   &--login {
     background-image: url('../../../assets/images/bg/login.jpg');
   }
@@ -168,4 +181,17 @@ nz-footer {
 
 .text-align {
   text-align: center;
+}
+
+.social-link {
+  display: block;
+  width: 100%;
+}
+
+.footer-menu {
+  margin: 0;
+  padding: 0;
+  &:li {
+    line-height: 1.6;
+  }
 }
